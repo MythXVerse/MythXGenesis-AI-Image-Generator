@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MythXGenesis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#1e40af',
+              'brand-secondary': '#3b82f6',
+              'brand-accent': '#60a5fa',
+              'dark-bg': '#0a0a0f',
+              'dark-card': '#1a1a24',
+              'dark-border': '#2a2a3a',
+              'light-text': '#e0e0e0',
+              'medium-text': '#a0a0b0',
+            },
+            animation: {
+              'gradient': 'gradient 8s linear infinite',
+              'pulse-glow': 'pulse-glow 3s infinite ease-in-out',
+            },
+            keyframes: {
+              gradient: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { 'box-shadow': '0 0 5px #3b82f6, 0 0 10px #3b82f6' },
+                '50%': { 'box-shadow': '0 0 20px #60a5fa, 0 0 30px #60a5fa' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+<body class="bg-dark-bg text-light-text font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
